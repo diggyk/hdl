@@ -1,0 +1,22 @@
+[package]
+name = "hdl"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "lib_hdl"
+path = "src/lib/lib.rs"
+
+[[bin]]
+name="hdl"
+path="src/main.rs"
+
+[dependencies]
+anyhow = "1.0.53"
+futures = "0.3.19"
+prost = "0.9.0"
+tokio = { version = "1.15.0", features = ["full"] }
+tonic = "0.6.2"
+
+[build-dependencies]
+tonic-build = "0.6.2"
