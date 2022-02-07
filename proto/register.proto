@@ -7,9 +7,10 @@ service Register {
 }
 
 message RegisterRequest {
-    string id = 1;
+    uint32 port = 10;
 }
 
 message RegisterResponse {
-    string message = 1;
+    bool accept = 1;
+    string msg = 2;
 }
